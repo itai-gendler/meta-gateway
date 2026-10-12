@@ -1,0 +1,73 @@
+---
+{
+  "appliesTo": [
+    {
+      "type": "entity",
+      "id": "token-group",
+      "effect": "changes",
+      "contexts": [
+        {
+          "place": "console::administration"
+        },
+        {
+          "place": "management-api::administration"
+        },
+        {
+          "place": "inference-api"
+        },
+        {
+          "place": "console::personal"
+        }
+      ]
+    }
+  ],
+  "permits": [
+    {
+      "actors": [
+        "deployment-administrator",
+        "owner"
+      ]
+    },
+    {
+      "configuredBy": "system-token",
+      "actors": [
+        "gateway-client"
+      ]
+    },
+    {
+      "configuredBy": "account-token",
+      "actors": [
+        "gateway-client"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "kind": "code",
+      "role": "implementation",
+      "target": "web/src/team/panels/PricingPanel.tsx"
+    },
+    {
+      "kind": "code",
+      "role": "implementation",
+      "target": "web/src/team/panels/QuotasPanel.tsx"
+    },
+    {
+      "kind": "code",
+      "role": "implementation",
+      "target": "internal/httpapi/admin_usage.go"
+    },
+    {
+      "kind": "code",
+      "role": "implementation",
+      "target": "internal/store/group.go"
+    }
+  ]
+}
+---
+
+
+
+# Deployment administrator, Owner or Gateway client using System token or Gateway client using Account token may change Token group
+
+Deployment administrator and Owner configure Token groups, preserving the protected default group. Inference consults the actual presented Token's applicable group. Transactional booking increments only that group's usage counters as a Product continuation; it does not enable arbitrary customer configuration edits.

@@ -1,0 +1,19 @@
+{
+  "scenarioKinds": [
+    {
+      "id": "primary",
+      "name": "Primary",
+      "description": "Established successful execution and unattended outcomes."
+    },
+    {
+      "id": "validation",
+      "name": "Validation",
+      "description": "Distinguished input, credential or authorization refusal before the forbidden effect."
+    },
+    {
+      "id": "edge",
+      "name": "Edge",
+      "description": "Distinguished conflicts, dependency failures, skipped results and partial outcomes."
+    }
+  ]
+}
