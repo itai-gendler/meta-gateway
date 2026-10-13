@@ -48,3 +48,7 @@
 # Meta Gateway
 
 Meta Gateway connects downstream AI clients to configured upstream connections and model routes. Operators manage credentials, discovery, routing, scoped Tokens, Account policies and operational records. Members use their permitted models, personal arrangements and workbench. The Product records recognized usage and configured charges, exchanges connection settings, and creates snapshots for offline restoration.
+
+## Intent
+
+Downstream AI clients multiply while upstream sites differ in model names, scatter quotas and each fail on their own. Meta Gateway lets a self-hoster mount every upstream connection once, so each downstream client needs one address and one Token, and passes requests through without rewriting their meaning.
