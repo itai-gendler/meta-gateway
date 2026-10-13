@@ -39,6 +39,17 @@
       "actor": "deployment-administrator"
     },
     {
+      "text": "Supply the current second-factor code.",
+      "kind": "actor",
+      "entities": [],
+      "contexts": {
+        "main": {
+          "place": "management-api::entry"
+        }
+      },
+      "actor": "deployment-administrator"
+    },
+    {
       "text": "Establish the Operator session.",
       "kind": "product",
       "entities": [
